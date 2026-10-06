@@ -4,6 +4,7 @@ import { formatWhen } from "@/lib/format"
 import type { Lang } from "@/lib/types"
 
 const NAV = [
+  ["/map", "map", "navMap"],
   ["/", "home", "navHome"],
   ["/compare", "compare", "navCompare"],
   ["/promos", "promos", "navPromos"],
@@ -42,7 +43,7 @@ export function Chrome({
           {NAV.map(([hrefPath, id, key]) => (
             <a
               key={id}
-              href={withView(hrefPath, query, id === "compare" ? { band: preserved.band } : undefined)}
+              href={withView(hrefPath, query, id === "compare" ? { band: preserved.band } : id === "map" ? { p: preserved.p, t: preserved.t } : undefined)}
               aria-current={active === id ? "page" : undefined}
             >
               {t[key]}

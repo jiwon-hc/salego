@@ -245,3 +245,20 @@ footer.site { margin-top: 40px; color: var(--muted); font-size: 0.92rem; max-wid
   .scroll { overflow: visible; }
   header.site { border: 0; }
 }
+
+/* World map */
+.tabs.tiers a { display: inline-flex; flex-direction: column; line-height: 1.25; }
+.tier-us { font-size: 0.75rem; opacity: 0.75; }
+figure.map { margin: 16px 0; }
+figure.map svg { display: block; width: 100%; height: auto; background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; }
+figure.map path { stroke: var(--sheet); stroke-width: 0.4; }
+figure.map a path:hover, figure.map a:focus-visible path { stroke: var(--ink); stroke-width: 1; }
+figure.map .promo-ring path { fill: none; stroke: var(--green); stroke-width: 1.6; pointer-events: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--line); }
+.legend .swatch-nodata { background: repeating-linear-gradient(45deg, #ebe6dc 0 3px, #c9c1b2 3px 4.5px); }
+.legend .swatch-promo { background: transparent; border: 2px solid var(--green); }
+.extremes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 32px; }
+.extremes ol { margin: 0; padding-left: 1.4em; }
+.extremes li { margin: 2px 0; }

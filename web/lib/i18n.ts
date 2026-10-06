@@ -4,6 +4,18 @@ export type Copy = {
   title: string
   kicker: string
   navHome: string
+  navMap: string
+  mapTitle: string
+  mapLede: string
+  mapPlatform: string
+  mapCheaper: string
+  mapDearer: string
+  mapEven: string
+  mapNoPrice: string
+  mapPromo: string
+  mapCheapest: string
+  mapDearest: string
+  mapTable: string
   navCompare: string
   navPromos: string
   navMethod: string
@@ -102,6 +114,18 @@ export const copy: Record<Lang, Copy> = {
     title: "AI 구독 가격 지도",
     kicker: "App Store 표시가",
     navHome: "국가",
+    navMap: "지도",
+    mapTitle: "세계 가격 지도",
+    mapLede: "플랫폼과 단계를 고르면 국가별 App Store 월 가격을 미국 가격과 비교해 칠합니다. 국가를 누르면 상세 가격으로 갑니다.",
+    mapPlatform: "플랫폼",
+    mapCheaper: "미국보다 저렴",
+    mapDearer: "미국보다 비쌈",
+    mapEven: "미국과 비슷 (±2%)",
+    mapNoPrice: "가격 없음",
+    mapPromo: "공식 프로모션 대상",
+    mapCheapest: "가장 저렴한 5개국",
+    mapDearest: "가장 비싼 5개국",
+    mapTable: "전체 국가 표로 보기",
     navCompare: "비교",
     navPromos: "프로모션",
     navMethod: "기준",
@@ -198,6 +222,18 @@ export const copy: Record<Lang, Copy> = {
     title: "AI subscription price map",
     kicker: "App Store display prices",
     navHome: "Country",
+    navMap: "Map",
+    mapTitle: "World price map",
+    mapLede: "Pick a platform and a tier. Each country is shaded by its App Store monthly price against the US price. Click a country for its full prices.",
+    mapPlatform: "Platform",
+    mapCheaper: "Cheaper than US",
+    mapDearer: "Dearer than US",
+    mapEven: "About the US price (±2%)",
+    mapNoPrice: "No price",
+    mapPromo: "Official promotion",
+    mapCheapest: "Five cheapest",
+    mapDearest: "Five dearest",
+    mapTable: "See every country in a table",
     navCompare: "Compare",
     navPromos: "Promotions",
     navMethod: "Method",

@@ -1,11 +1,12 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import { ComparePage, CountryPage, HomePage, MethodPage, PlatformPage, PromosPage } from "@/views/pages"
+import { ComparePage, CountryPage, HomePage, MapPage, MethodPage, PlatformPage, PromosPage } from "@/views/pages"
 
 // The static HTML is the default view; in the browser the real query string takes over.
 const VIEWS = {
   home: HomePage,
+  map: MapPage,
   compare: ComparePage,
   method: MethodPage,
   promos: PromosPage,
