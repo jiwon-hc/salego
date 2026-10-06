@@ -1,0 +1,42 @@
+exclude: '(?i)credit'
+
+platforms:
+  - id: chatgpt
+    name: ChatGPT
+    vendor: OpenAI
+    adam_id: "6448311069"
+  - id: claude
+    name: Claude
+    vendor: Anthropic
+    adam_id: "6473753684"
+  - id: gemini
+    name: Gemini
+    vendor: Google
+    adam_id: "6477489729"
+  - id: grok
+    name: Grok
+    vendor: xAI
+    adam_id: "6670324846"
+  - id: perplexity
+    name: Perplexity
+    vendor: Perplexity
+    adam_id: "1668000334"
+
+tiers:
+  - {id: chatgpt-go, platform: chatgpt, name: ChatGPT Go, band: entry, order: 10, match: '(?i)^chatgpt go$'}
+  - {id: chatgpt-plus, platform: chatgpt, name: ChatGPT Plus, band: plus, order: 20, match: '(?i)^chatgpt plus$'}
+  - {id: chatgpt-pro-100, platform: chatgpt, name: ChatGPT Pro 100, band: pro, order: 30, match: '(?i)^chatgpt pro (100|5x)$'}
+  - {id: chatgpt-pro-200, platform: chatgpt, name: ChatGPT Pro 200, band: ultra, order: 40, match: '(?i)^chatgpt pro (200|20x)$'}
+  - {id: chatgpt-pro-500, platform: chatgpt, name: ChatGPT Pro 500, band: ultra, order: 50, match: '(?i)^chatgpt pro 500$'}
+  - {id: claude-pro, platform: claude, name: Claude Pro, band: plus, order: 20, match: '(?i)^claude pro$'}
+  - {id: claude-max-5x, platform: claude, name: Claude Max 5x, band: pro, order: 30, match: '(?i)^claude max 5x$'}
+  - {id: claude-max-20x, platform: claude, name: Claude Max 20x, band: ultra, order: 40, match: '(?i)^claude max 20x$'}
+  - {id: gemini-plus, platform: gemini, name: Google AI Plus, band: entry, order: 10, match: '(?i)^google ai plus\b'}
+  - {id: gemini-pro, platform: gemini, name: Google AI Pro, band: plus, order: 20, match: '(?i)^google ai pro\b'}
+  - {id: gemini-ultra, platform: gemini, name: Google AI Ultra, band: ultra, order: 40, match: '(?i)^google ai ultra\b'}
+  - {id: grok-lite, platform: grok, name: SuperGrok Lite, band: entry, order: 10, match: '(?i)^supergrok lite$'}
+  - {id: grok, platform: grok, name: SuperGrok, band: plus, order: 20, match: '(?i)^supergrok$'}
+  - {id: grok-plus, platform: grok, name: SuperGrok Plus, band: pro, order: 30, match: '(?i)^supergrok plus$'}
+  - {id: grok-heavy, platform: grok, name: SuperGrok Heavy, band: ultra, order: 40, match: '(?i)^supergrok heavy$'}
+  - {id: perplexity-pro, platform: perplexity, name: Perplexity Pro, band: plus, order: 20, match: '(?i)^perplexity pro$'}
+  - {id: perplexity-max, platform: perplexity, name: Perplexity Max, band: ultra, order: 40, match: '(?i)^perplexity max$'}

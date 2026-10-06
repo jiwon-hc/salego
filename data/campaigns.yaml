@@ -1,0 +1,61 @@
+# Official pages re-read on 2026-10-06. The collector checks must_contain
+# against the live page. A blocked fetch keeps the last manual read.
+- id: chatgpt-student-2026
+  platform: chatgpt
+  tier_id: chatgpt-plus
+  audience: student
+  title_ko: "ChatGPT Plus 4개월 무료"
+  title_en: "ChatGPT Plus free for 4 billing periods"
+  effect_ko: "재학생 대상 Plus 월 청구 4회 무료. 끝나면 월 $20으로 갱신."
+  effect_en: "Four free monthly billing periods of Plus for eligible students, then $20/month."
+  country_mode: allowlist
+  countries: [US]
+  ends_on: "2026-10-31"
+  verified_on: "2026-10-06"
+  evidence_url: "https://help.openai.com/en/articles/20001493-chatgpt-back-to-school-offer-for-students"
+  must_contain:
+    - "four free monthly billing periods"
+    - "October 31, 2026"
+    - "U.S. degree-granting"
+  note_ko: "미국 학위 수여 대학의 재학생이고 SheerID 확인이 필요하다. 같은 문서의 일본어판은 App Store·Google Play로 결제 중인 구독은 스토어 결제가 이어지는 동안 대상에서 빠질 수 있다고 적는다."
+  note_en: "Current students at eligible U.S. degree-granting institutions, verified with SheerID. The Japanese version of the same article says subscriptions billed through the App Store or Google Play stay ineligible while that billing continues."
+
+- id: gemini-student-pro-2026
+  platform: gemini
+  tier_id: gemini-pro
+  audience: student
+  title_ko: "Google AI Pro 12개월 무료"
+  title_en: "Google AI Pro free for 12 months"
+  effect_ko: "미국 대학생 대상 AI Pro 1년 무료. 끝나면 월 $19.99."
+  effect_en: "One year of Google AI Pro for eligible U.S. college students, then $19.99/month."
+  country_mode: allowlist
+  countries: [US]
+  ends_on: "2026-12-31"
+  verified_on: "2026-10-06"
+  evidence_url: "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+  must_contain:
+    - "Eligible students in the U.S. only"
+    - "December 31, 2026"
+    - "$19.99/month"
+  note_ko: "18세 이상, 결제 수단 등록, 2026-12-31까지 신청. 스토어 표시가와 별개인 계정 혜택이다."
+  note_en: "Age 18+, payment method on file, redeem by 2026-12-31. This is an account offer, separate from the App Store list price."
+
+- id: gemini-student-plus-2026
+  platform: gemini
+  tier_id: gemini-plus
+  audience: student
+  title_ko: "Google AI Plus 12개월 무료"
+  title_en: "Google AI Plus free for 12 months"
+  effect_ko: "미국 밖 140개 이상 시장의 대학생 대상 AI Plus 1년 무료. 국가 명단 전체는 공개돼 있지 않다."
+  effect_en: "One year of Google AI Plus for students in 140+ markets outside the U.S. The full country list is not published."
+  country_mode: excluded_rest_unlisted
+  countries: [US, BO, AL, CA, MO, HK, TN]
+  ends_on: "2026-12-31"
+  verified_on: "2026-10-06"
+  evidence_url: "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+  must_contain:
+    - "over 140 markets"
+    - "Bolivia, Albania, Canada, Macau, Hong Kong, and Tunisia"
+    - "December 31, 2026"
+  note_ko: "공식 글은 미국·볼리비아·알바니아·캐나다·마카오·홍콩·튀니지를 제외한다고만 적는다. 그 바깥 국가는 개별 등재가 없어 대상 여부를 확정하지 않는다."
+  note_en: "The post names the United States, Bolivia, Albania, Canada, Macau, Hong Kong, and Tunisia as excluded. Every other country stays unlisted, not confirmed."

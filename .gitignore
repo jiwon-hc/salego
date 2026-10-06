@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.next/
+node_modules/
+data/raw/
+data/prices.sqlite*
+web/tsconfig.tsbuildinfo
+*.bak
