@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   description: "국가별 AI 구독 표시 가격과 프로모션 상태",
 }
 
-export const dynamic = "force-dynamic"
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">

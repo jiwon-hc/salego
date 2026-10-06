@@ -1,8 +1,8 @@
 import data from "../data/snapshot.json"
 import type { Snapshot } from "./types"
 
-// Bundled at build time so the deployment always carries the data.
-// The daily collector commits a new snapshot, and that commit triggers a redeploy.
+// Bundled at build time into the static export.
+// The daily workflow commits a new snapshot, then rebuilds and deploys the site.
 export function loadSnapshot(): Snapshot | null {
   return data as unknown as Snapshot
 }

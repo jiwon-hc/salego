@@ -6,3 +6,4 @@ data/raw/
 data/prices.sqlite*
 web/tsconfig.tsbuildinfo
 *.bak
+web/out/

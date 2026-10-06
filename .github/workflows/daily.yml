@@ -28,7 +28,6 @@ jobs:
       - run: python collector/run.py
       # Pages that hit rate limits get one slower pass.
       - run: python collector/run.py --retry-failed
-      # The push triggers the Vercel deployment (project root: web).
       - name: Commit snapshot
         run: |
           git config user.name "github-actions[bot]"
@@ -36,3 +35,11 @@ jobs:
           git add -A web/data data
           git diff --cached --quiet || git commit -m "data: prices $(date -u +%F)"
           git push
+
+  deploy:
+    needs: collect
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
