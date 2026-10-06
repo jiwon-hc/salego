@@ -8,9 +8,16 @@ function first(value: string | string[] | undefined): string | undefined {
   return Array.isArray(value) ? value[0] : value
 }
 
+// Prices compare in won unless the URL asks otherwise; the default stays out of URLs.
+export const DEFAULT_CUR: Cur = "krw"
+
+export function curParam(cur: Cur): string | undefined {
+  return cur === DEFAULT_CUR ? undefined : cur
+}
+
 export function readQuery(raw: Raw): Query {
   const curRaw = first(raw.cur)
-  const cur: Cur = curRaw === "usd" || curRaw === "krw" ? curRaw : "local"
+  const cur: Cur = curRaw === "usd" || curRaw === "krw" || curRaw === "local" ? curRaw : DEFAULT_CUR
   return { lang: first(raw.lang) === "en" ? "en" : "ko", cur }
 }
 
@@ -40,6 +47,6 @@ export function withView(
   return href(path, {
     ...keep,
     lang: query.lang === "en" ? "en" : undefined,
-    cur: query.cur === "local" ? undefined : query.cur,
+    cur: curParam(query.cur),
   })
 }

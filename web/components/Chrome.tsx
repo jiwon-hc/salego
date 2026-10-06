@@ -1,5 +1,5 @@
 import { copy, type Copy } from "@/lib/i18n"
-import { href, withView, type Query } from "@/lib/query"
+import { curParam, href, withView, type Query } from "@/lib/query"
 import { formatWhen } from "@/lib/format"
 import type { Lang } from "@/lib/types"
 
@@ -51,11 +51,11 @@ export function Chrome({
           ))}
         </nav>
         <div className="controls">
-          <a href={href(path, { ...preserved, cur: query.cur === "local" ? undefined : query.cur })} aria-current={query.lang === "ko" ? "true" : undefined}>{t.langKo}</a>
-          <a href={href(path, { ...preserved, lang: "en", cur: query.cur === "local" ? undefined : query.cur })} aria-current={query.lang === "en" ? "true" : undefined}>{t.langEn}</a>
-          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined })} aria-current={query.cur === "local" ? "true" : undefined}>{t.curLocal}</a>
-          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined, cur: "usd" })} aria-current={query.cur === "usd" ? "true" : undefined}>{t.curUsd}</a>
-          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined, cur: "krw" })} aria-current={query.cur === "krw" ? "true" : undefined}>{t.curKrw}</a>
+          <a href={href(path, { ...preserved, cur: curParam(query.cur) })} aria-current={query.lang === "ko" ? "true" : undefined}>{t.langKo}</a>
+          <a href={href(path, { ...preserved, lang: "en", cur: curParam(query.cur) })} aria-current={query.lang === "en" ? "true" : undefined}>{t.langEn}</a>
+          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined, cur: curParam("krw") })} aria-current={query.cur === "krw" ? "true" : undefined}>{t.curKrw}</a>
+          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined, cur: curParam("local") })} aria-current={query.cur === "local" ? "true" : undefined}>{t.curLocal}</a>
+          <a href={href(path, { ...preserved, lang: query.lang === "en" ? "en" : undefined, cur: curParam("usd") })} aria-current={query.cur === "usd" ? "true" : undefined}>{t.curUsd}</a>
         </div>
       </header>
       <main lang={query.lang}>{children}</main>
@@ -90,7 +90,7 @@ export function hiddenView(query: Query) {
   return (
     <>
       {query.lang === "en" ? <input type="hidden" name="lang" value="en" /> : null}
-      {query.cur !== "local" ? <input type="hidden" name="cur" value={query.cur} /> : null}
+      {curParam(query.cur) ? <input type="hidden" name="cur" value={query.cur} /> : null}
     </>
   )
 }

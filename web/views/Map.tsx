@@ -121,7 +121,7 @@ export function MapView({ raw }: { raw: Raw }) {
       <div className="tabs tiers" aria-label={t.tier}>
         {tiers.map((item) => {
           const usRow = observation(index, "US", item.id, "month")
-          const usPrice = usRow?.availability === "on_sale" ? localAmount(usRow, lang) : null
+          const usPrice = usRow?.availability === "on_sale" ? displayAmount(usRow, query.cur, lang) ?? localAmount(usRow, lang) : null
           return (
             <a key={item.id} href={withView("/map", query, { p: platform.id, t: item.id })} aria-current={item.id === tier.id ? "page" : undefined}>
               {item.name}
