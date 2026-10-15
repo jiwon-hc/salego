@@ -12,3 +12,4 @@ date,iso2,tier_id,period,old_amount,new_amount,currency
 2026-10-14,JM,gemini-ultra,month,199.99,99.99,USD
 2026-10-14,SG,gemini-ultra,month,144.98,289.98,SGD
 2026-10-14,SR,gemini-ultra,month,99.99,199.99,USD
+2026-10-15,JM,gemini-ultra,month,99.99,199.99,USD
