@@ -18,3 +18,4 @@ date,iso2,tier_id,period,old_amount,new_amount,currency
 2026-10-20,PK,gemini-pro,month,5600.0,5499.0,PKR
 2026-10-20,TR,perplexity-pro,month,999.99,899.99,TRY
 2026-10-21,TR,perplexity-pro,month,899.99,999.99,TRY
+2026-10-22,KZ,perplexity-pro,month,9990.0,11990.0,KZT
