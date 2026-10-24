@@ -22,3 +22,7 @@ date,iso2,tier_id,period,old_amount,new_amount,currency
 2026-10-23,AL,gemini-ultra,month,199.99,119.99,USD
 2026-10-23,AM,gemini-ultra,month,199.99,99.99,USD
 2026-10-23,KZ,perplexity-pro,month,11990.0,9990.0,KZT
+2026-10-24,AL,gemini-ultra,month,119.99,199.99,USD
+2026-10-24,AM,gemini-ultra,month,99.99,199.99,USD
+2026-10-24,PW,gemini-ultra,month,199.99,99.99,USD
+2026-10-24,PK,gemini-pro,month,5499.0,5600.0,PKR
