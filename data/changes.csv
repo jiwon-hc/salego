@@ -29,3 +29,4 @@ date,iso2,tier_id,period,old_amount,new_amount,currency
 2026-10-25,PW,gemini-ultra,month,99.99,199.99,USD
 2026-10-25,TR,perplexity-pro,month,999.99,899.99,TRY
 2026-10-27,SB,gemini-ultra,month,199.99,99.99,USD
+2026-10-28,SB,gemini-ultra,month,99.99,199.99,USD
